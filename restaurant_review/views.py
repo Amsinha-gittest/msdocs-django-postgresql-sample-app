@@ -74,8 +74,8 @@ def add_review(request, id):
     return HttpResponseRedirect(reverse('details', args=(id,)))
 
 @csrf_exempt
-def delete_restaurant(request, name):
-    print("name =========================", name)
+def delete_restaurant(request, id):
+    print("name =========================", id)
     # restaurant = Restaurant.objects.get(name = name)
     restaurant = get_object_or_404(Restaurant, pk=id)
     restaurant.delete()
