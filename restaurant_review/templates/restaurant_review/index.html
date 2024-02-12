@@ -43,9 +43,9 @@
 {% endblock %}
 {% block content %}
   {% if LastViewedRestaurant %}
-      <h3>Last viewed restaurant (saved in cache): {{ LastViewedRestaurant }}</h3>
+      <h3>Last viewed College (saved in cache): {{ LastViewedRestaurant }}</h3>
   {% endif %}
-  <h1>Restaurants</h1>
+  <h1>Colleges Ratings</h1>
 
   {% if restaurants %}
       <table class="table">
@@ -54,7 +54,7 @@
                   <th>Name</th>
                   <th>Rating</th>
                   <th class="text-end">Details</th>
-                  <th class="text-end">Delete Restaurant</th>
+                  <th class="text-end">Delete College</th>
               </tr>
           </thead>
           <tbody>
@@ -69,10 +69,10 @@
           </tbody>
       </table>
   {% else %}
-      <p>No restaurants exist.  Select Add new restaurant to add one.</p>
+      <p>No restaurants exist.  Select Add new College to add one.</p>
   {% endif %}
 
   <div class="d-flex justify-content-end">
-          <a href="{% url 'create_restaurant' %}" class="btn btn-success px-4 gap-3">Add new restaurant</a>
+          <a href="{% url 'create_restaurant' %}" class="btn btn-success px-4 gap-3">Add new College</a>
   </div>
 {% endblock %}
