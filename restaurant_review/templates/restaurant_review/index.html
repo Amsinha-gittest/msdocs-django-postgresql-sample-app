@@ -54,6 +54,7 @@
                   <th>Name</th>
                   <th>Rating</th>
                   <th class="text-end">Details</th>
+                  <th class="text-end">Delete Restaurant</th>
               </tr>
           </thead>
           <tbody>
@@ -62,7 +63,7 @@
                       <td>{{ restaurant.name }}</td>
                       <td>{% star_rating restaurant.avg_rating restaurant.review_count   %}   </td>
                       <td class="text-end"><a href="{% url 'details' restaurant.id %}" class="btn btn-sm btn-primary">Details</a></td>
-                      <td class="text-end"><a href="/delete/{{restaurant.name}}" class="btn btn-sm btn-primary">Delete</a></td>
+                      <td class="text-end"><a href="{% url 'delete_restaurant' restaurant.id %}" class="btn btn-sm btn-primary">Delete</a></td>
                   </tr>
               {% endfor %}
           </tbody>
