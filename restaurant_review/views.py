@@ -75,7 +75,7 @@ def add_review(request, id):
 
 @csrf_exempt
 def delete_restaurant(request, name):
-
+    print("name =========================", name)
     restaurant = Restaurant.objects.get(name = name)
     restaurant.delete()
     
