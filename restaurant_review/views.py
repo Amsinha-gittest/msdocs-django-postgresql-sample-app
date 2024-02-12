@@ -76,8 +76,8 @@ def add_review(request, id):
 @csrf_exempt
 def delete_restaurant(request, name):
     print("name =========================", name)
-    # restaurant = Restaurant.objects.get(name = name)
-    restaurant = get_object_or_404(Restaurant, pk=id)
+    restaurant = Restaurant.objects.get(name = name)
+    # restaurant = get_object_or_404(Restaurant, pk=id)
     restaurant.delete()
     
     restaurants = Restaurant.objects.annotate(avg_rating=Avg('review__rating')).annotate(review_count=Count('review'))

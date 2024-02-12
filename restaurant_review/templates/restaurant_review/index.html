@@ -63,7 +63,7 @@
                       <td>{{ restaurant.name }}</td>
                       <td>{% star_rating restaurant.avg_rating restaurant.review_count   %}   </td>
                       <td class="text-end"><a href="{% url 'details' restaurant.id %}" class="btn btn-sm btn-primary">Details</a></td>
-                      <td class="text-end"><a href="{% url 'delete_restaurant' restaurant.id %}" class="btn btn-sm btn-primary">Delete</a></td>
+                      <td class="text-end"><a href="{% url 'delete_restaurant' restaurant.name %}" class="btn btn-sm btn-primary">Delete</a></td>
                   </tr>
               {% endfor %}
           </tbody>
